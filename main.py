@@ -1,16 +1,22 @@
-# This is a sample Python script.
+def remainder_counter(remainder):
+    count = 0
+    if remainder == 1:
+        count += 1
+    elif remainder == 3 or 2:
+        count += 2
+    else:
+        pass
+    return count
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
 
+counter = 0
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
+spaces_amount = (int(input()) for _ in range(int(input())))
+for space in spaces_amount:
+    if space % 4 == 0:
+        counter += space // 4
+    else:
+        counter += space // 4
+        counter += remainder_counter(space % 4)
 
-
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+print(counter)
