@@ -77,7 +77,7 @@ int main() {
         cin >> arr[i];
     }
     
-    int counter = 0;
+    long int counter = 0;
 
     for (int i = 0; i < arr_size; i++) {
         int number = arr[i];
